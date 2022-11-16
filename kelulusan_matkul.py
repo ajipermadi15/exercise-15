@@ -17,18 +17,19 @@ Setiap mahasiswa dikatakan `Lulus` jika memperoleh indeks A, B, atau C, dan dika
 data_mahasiswa = [('Aurel', 101, 80), ('Bon', 102, 79), ('Cici', 103, 92), ('Domixus', 104, 65), ('Enggar', 105, 55)]
 
 for nama, nim, na in data_mahasiswa:
+
     if na > 90:
         grade = 'A'
-    elif na < 90:
+    elif na >= 80:
         grade = 'B'
-    elif na < 80:
+    elif na >= 70:
         grade = 'C'
-    elif na < 70:
+    elif na >= 60:
         grade = 'D'
-    elif na < 60:
+    elif na < 70:
         grade = 'E'
 
-    if grade == 'A' or 'B' or 'C':
+    if grade == 'A' or grade == 'B' or  grade == 'C':
         status = 'Lulus'
     else:
         status = 'Mengulang'

@@ -3,8 +3,8 @@ Bersihkan kode ini!
 
 Dengan materi clean code yang sudah dipelajari, aturlah sedemikian rupa sehingga kode di bawah bisa menjadi lebih readable.
 """
-
 import numpy as np
+
 def intro():
     print('-'*60)
     print('LUAS dan Keliling BANGUN DATAR')
@@ -14,26 +14,42 @@ def intro():
     print('3. Persegi Panjang')
     print('4. Lingkaran')
     print('-'*60)
+
+
 def segitiga(alas, tinggi):
-    sisi_miring = np.sqrt(alas**2+tinggi**2)
-    keliling = alas+tinggi+sisi_miring
-    luas = 0.5*alas*tinggi
+    sisi_miring = np.sqrt(alas**2 + tinggi**2)
+    keliling = alas + tinggi + sisi_miring
+    luas = 0.5 * alas * tinggi
+
     return keliling, luas
+
+
 def persegi(sisi):
-    keliling = 4*sisi
-    luas = sisi**2
+    keliling = 4 * sisi
+    luas = sisi ** 2
+
     return keliling, luas
+
+
 def persegi_panjang(panjang, lebar):
-    keliling = 2*(panjang + lebar)
-    luas = panjang *lebar
+    keliling = 2 * (panjang + lebar)
+    luas = panjang * lebar
+
     return keliling, luas
+
+
 def lingkaran(radius):
-    keliling = 2* np.pi *radius
-    luas = np.pi *(radius**2)
+    keliling = 2 * np.pi * radius
+    luas = np.pi * (radius ** 2)
+
     return keliling, luas
+
+
 while True:
     intro()
+
     tipe = int(input('Masukkan bangun datar yang diinginkan (1-4): '))
+
     if tipe == 1:
         alas = float(input('Masukkan nilai alas: '))
         tinggi = float(input('Masukkan nilai tinggi: '))
@@ -58,6 +74,8 @@ while True:
         print(f'Luas lingkaran dengan radius {radius} satuan adalah {luas} satuan.')
     else:
         print('Pastikan masukkan pilihan yang benar (1-4)!')
+
     repeat = input('Apakah ingin menghitung ulang? (Y/N): ')
+
     if repeat.lower() == 'n':
         break
